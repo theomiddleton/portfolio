@@ -104,34 +104,33 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        Thank you to{' '}
         <a
-          href="https://edelsonphotography.com/"
+          href="https://theom.darkroom.com/"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Josh Edelson
+          Prints
         </a>
         ,{' '}
         <a
-          href="https://www.newrevmedia.com/"
+          href="https://unsplash.com/@theom_"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Jenny Morgan
+          Unsplash
         </a>
         , and{' '}
         <a
-          href="https://www.garysextonphotography.com/"
+          href="https://instagram.com/theomiddleton_"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Gary Sexton
+          Instagram
         </a>{' '}
-        for the pictures.
+        
       </footer>
     </>
   )
