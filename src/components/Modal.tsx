@@ -22,10 +22,10 @@ export default function Modal({
     const [direction, setDirection] = useState('0')
     const [curIndex, setCurIndex] = useState(index)
 
-    function handelClose() {
+    function handleClose() {
         router.push('/', undefined, { shallow: true })
-    }
-
+        onClose()
+      }
     function changePhotoId(newVal: number) {
         if (newVal > index) {
             setDirection(1)
