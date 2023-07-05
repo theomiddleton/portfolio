@@ -45,8 +45,7 @@ export default function SharedModal({
     trackMouse: true,
   })
 
-  let currentImage = images?.[index] ?? currentPhoto;
-
+  let currentImage = images ? images[index] : currentPhoto
 
   return (
     <MotionConfig
@@ -78,10 +77,14 @@ export default function SharedModal({
                   }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
                     currentImage.public_id
                   }.${currentImage.format}`}
-                  width={navigation ? 1280 : 1920}
-                  height={navigation ? 853 : 1280}
+                  //width={navigation ? 1280 : 1920}
+                  //height={navigation ? 853 : 1280}
+                  width="0"
+                  height="0"
+                  sizes="90vw"
+                  className="w-full h-auto"
                   priority
-                  alt="Photo from Theo Middleton"
+                  alt="Next.js Conf image"
                   onLoadingComplete={() => setLoaded(true)}
                 />
               </motion.div>
@@ -129,7 +132,7 @@ export default function SharedModal({
                   </a>
                 ) : (
                   <a
-                    href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Theo%20Middleton%0A%0Ahttps://tm-portfolio.vercel.app/p/${index}`}
+                    href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Theo%20Middleton!%0A%0Ahttps://tm-portfolio.vercel.app/p/${index}`}
                     className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
                     target="_blank"
                     title="Open fullsize version"

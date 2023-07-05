@@ -4,13 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
-import Background from '../components/Icons/Background'
+import Bridge from '../components/Icons/Background'
 import Logo from '../components/Icons/Logo'
 import Modal from '../components/Modal'
 import cloudinary from '../utils/cloudinary'
 import getBase64ImageUrl from '../utils/generateBlurPlaceholder'
 import type { ImageProps } from '../utils/types'
 import { useLastViewedPhoto } from '../utils/useLastViewedPhoto'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter()
@@ -33,11 +34,11 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         <title>TM - Portfolio - 23</title>
         <meta
           property="og:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
+          content="https://tm-portfolio.vercel.app/og-image.png"
         />
         <meta
           name="twitter:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
+          content="https://tm-portfolio.vercel.app/og-image.png"
         />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
@@ -53,7 +54,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           <div className="after:content relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
             <div className="absolute inset-0 flex items-center justify-center opacity-20">
               <span className="flex max-h-full max-w-full items-center justify-center">
-                <Background />
+                <Bridge />
               </span>
               <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div>
@@ -64,8 +65,9 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               Photos from Theo Middleton
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Photos from Theo Middleton. 
-              Licensable photos available on unsplash.
+              Please click on an image to view, then press the link icon:{' '}<ArrowTopRightOnSquareIcon className="h-5 w-5" />
+              to view it full, and the download icon to download it.
+              The website is still in development, so please be patient.
             </p>
             <a
               className="pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4"
@@ -86,7 +88,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
             >
               <Image
-                alt="Next.js Conf photo"
+                alt="An image from Theo Middleton"
                 className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
                 style={{ transform: 'translate3d(0, 0, 0)' }}
                 placeholder="blur"
@@ -104,31 +106,32 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        <a
-          href="https://theom.darkroom.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Prints
-        </a>
-        ,{' '}
+        Photos available for licencing on {' '}
         <a
           href="https://unsplash.com/@theom_"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Unsplash
+          unsplash
         </a>
-        , and{' '}
+        ,{' '}
         <a
-          href="https://instagram.com/theomiddleton_"
+          href="https://theom.darkroom.com/"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Instagram
+          prints
+        </a>
+        , and{' '}
+        <a
+          href="https://www.instagram.com/theomiddleton_/"
+          target="_blank"
+          className="font-semibold hover:text-white"
+          rel="noreferrer"
+        >
+          instagram
         </a>{' '}
         
       </footer>

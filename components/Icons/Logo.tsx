@@ -10,7 +10,6 @@ export default function Logo() {
           height={250}
           style={{ borderRadius: '50%'}}
           priority={true}
-
         />
     )
 }
