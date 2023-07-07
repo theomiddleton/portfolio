@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <meta property="og:site_name" content="nextjsconf-pics.vercel.app" />
           <meta
             property="og:description"
-            content="See pictures from Next.js Conf and the After Party."
+            content="Photo gallery from Theo Middleton."
           />
           <meta property="og:title" content="Photos From Theo Middleton" />
           <meta name="twitter:card" content="summary_large_image" />
