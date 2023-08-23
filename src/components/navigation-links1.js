@@ -65,21 +65,21 @@ const NavigationLinks1 = (props) => {
 }
 
 NavigationLinks1.defaultProps = {
-  text: 'About',
   text3: 'Team',
   text4: 'Blog',
-  text1: 'Features',
   rootClassName: '',
   text2: 'Pricing',
+  text: 'About',
+  text1: 'Features',
 }
 
 NavigationLinks1.propTypes = {
-  text: PropTypes.string,
   text3: PropTypes.string,
   text4: PropTypes.string,
-  text1: PropTypes.string,
   rootClassName: PropTypes.string,
   text2: PropTypes.string,
+  text: PropTypes.string,
+  text1: PropTypes.string,
 }
 
 export default NavigationLinks1

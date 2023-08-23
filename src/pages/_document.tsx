@@ -25,6 +25,12 @@ class CustomDocument extends Document {
             data-tag="default-style-sheet"
           ></style>
           <link
+            rel="shortcut icon"
+            href="/favicon1.ico"
+            type="icon/png"
+            sizes="32x32"
+          ></link>
+          <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
             data-tag="font"

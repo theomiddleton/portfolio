@@ -16,6 +16,7 @@ const GalleryCard2 = (props) => {
         <img
           alt={props.imageAlt}
           src={props.imageSrc}
+          loading="eager"
           className="gallery-card2-image"
         />
       </div>
@@ -31,11 +32,14 @@ const GalleryCard2 = (props) => {
             justify-content: center;
           }
           .gallery-card2-container {
+            flex: 0 0 auto;
             width: 100%;
             height: 100%;
             display: flex;
             opacity: 0;
             z-index: 1;
+            position: relative;
+            grid-area: c;
             transition: 0.3s;
             align-items: flex-start;
             flex-direction: column;
@@ -43,7 +47,7 @@ const GalleryCard2 = (props) => {
             background-color: #00000096;
           }
           .gallery-card2-container:hover {
-            opacity: 1;
+            transform: scale(0.98);
           }
           .gallery-card2-container1 {
             width: 100%;
@@ -85,10 +89,26 @@ const GalleryCard2 = (props) => {
           .gallery-card2-root-class-name {
             flex: 1;
           }
+          .gallery-card2-root-class-name1 {
+            top: 8px;
+            flex: 1;
+            left: 8px;
+            width: 100%;
+            height: 98.5%;
+            position: absolute;
+          }
 
           .gallery-card2-root-class-name4 {
+            top: 8px;
             flex: 1;
-            height: 100%;
+            left: 8px;
+            width: 100%;
+            height: 98.5%;
+            position: absolute;
+          }
+
+          .gallery-card2-root-class-name6 {
+            flex: 1;
           }
 
           @media (max-width: 767px) {
@@ -119,7 +139,7 @@ GalleryCard2.defaultProps = {
   title: 'Project Title',
   rootClassName: '',
   imageSrc:
-    '/pictures/lgaoon.jpg',
+    'https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDI0fHxmb29kfGVufDB8fHx8MTYyNjQ0OTIzNQ&ixlib=rb-1.2.1&w=1500',
 }
 
 GalleryCard2.propTypes = {
