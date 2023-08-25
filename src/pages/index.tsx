@@ -4,7 +4,7 @@ import Head from 'next/head'
 import NavigationLinks1 from '../components/navigation-links1'
 import GalleryCard2 from '../components/gallery-card2'
 
-const Home = (props) => {
+const Home = () => {
   return (
     <>
       <div className="home-container">
