@@ -2,7 +2,11 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-const GalleryCard2 = (props) => {
+interface Props {
+  onClick: () => void;
+}
+
+const GalleryCard2 = (props: Props) => {
   return (
     <>
       <div className={`gallery-card2-gallery-card ${props.rootClassName} `}>
