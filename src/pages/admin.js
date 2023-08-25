@@ -1,7 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
-
-import React from 'react'
 
 import styles from '../styles/admin.module.css'
 
