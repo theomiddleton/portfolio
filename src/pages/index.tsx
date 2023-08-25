@@ -15,6 +15,7 @@ const Home = (props) => {
             property="og:image"
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/be0159a4-e9c0-4262-a216-6ff2d97f9079/ee3e45c0-dac2-4ceb-b9ee-4cca3d12dafd?org_if_sml=1"
           />
+          <meta name="description" content="tm-portfolio-23" />
         </Head>
         <header data-role="Header" className="home-header">
           <img alt="logo" src="/logo-1500h.png" className="home-image" />
