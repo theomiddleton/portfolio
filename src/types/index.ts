@@ -1,4 +1,3 @@
-import { type Product } from "@/db/schema"
 import { type FileWithPath } from "react-dropzone"
 
 import { type Icons } from "@/components/icons"
@@ -40,37 +39,4 @@ export type StoredFile = {
   id: string
   name: string
   url: string
-}
-
-export type CartItem = {
-  productId: number
-  quantity: number
-  productSubcategory?: string | null
-}
-
-export interface CheckoutItem extends CartItem {
-  price: number
-}
-
-export interface CartLineItem
-  extends Pick<
-    Product,
-    | "id"
-    | "name"
-    | "images"
-    | "category"
-    | "subcategory"
-    | "price"
-    | "inventory"
-    | "storeId"
-  > {
-  quantity?: number
-  storeName: string | null
-}
-
-export type SubscriptionPlan = {
-  name: string
-  description: string
-  stripePriceId: string
-  monthlyPrice?: number | null
 }
