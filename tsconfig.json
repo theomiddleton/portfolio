@@ -22,7 +22,7 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
+      "@/*": [
         "./src/*"
       ]
     },
@@ -41,7 +41,7 @@
     "**/*.mjs",
     "src/**/*.ts",
     ".next/types/**/*.ts"
-, "src/pages/old-admin.js"  ],
+, "src/pages/old-admin.js", "src/pages/_app.js"  ],
   "exclude": [
     "node_modules"
   ]
