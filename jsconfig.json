@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "src/pages/old-admin.js"]
 }
