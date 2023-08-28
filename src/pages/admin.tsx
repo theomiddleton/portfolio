@@ -37,7 +37,7 @@ const Admin = () => {
         setShowLoader(false);
       }
     }
-  }, [isLoaded, organizationList]);
+  }, [isLoaded, organizationList, router]);
 
   const adminOrganization = isLoaded
   ? organizationList.find((org) => org.membership.role === 'admin')

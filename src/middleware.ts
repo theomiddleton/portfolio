@@ -8,6 +8,8 @@ export default authMiddleware({
     "/sso-callback(.*)",
     "/404(.*)",
     "/500(.*)",
+    "/admin(.*)",
+    "/admin/new(.*)",
 
   ],
 })
