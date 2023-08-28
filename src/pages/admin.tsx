@@ -1,11 +1,62 @@
 import styles from "../styles/admin.module.css";
 import { UploadButton } from "../utils/uploadthing"
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import Head from "next/head";
 // You need to import our styles for the button to look right. Best to import in the root /_app.tsx but this is fine
 import "@uploadthing/react/styles.css";
- 
+import Loading from "@/components/Loading";
+
+import { useOrganizationList } from "@clerk/nextjs";
+import router, { useRouter } from "next/router";
+
 const Admin = () => {
+  
+  const router = useRouter();
+  
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 5000);
+
+    return () => clearTimeout(timer); 
+  }, []);
+
+  const { organizationList, isLoaded, setActive } = useOrganizationList();
+
+  useEffect(() => {
+    if (isLoaded) {
+      const adminOrg = organizationList.find(
+        (org) => org.membership.role === "admin"
+      );
+    
+      if (!adminOrg || adminOrg.membership.role !== "admin") {
+        router.push("/"); // Redirect to home page
+      } else {
+        setShowLoader(false);
+      }
+    }
+  }, [isLoaded, organizationList]);
+
+  const adminOrganization = isLoaded
+  ? organizationList.find((org) => org.membership.role === 'admin')
+  : null;
+
+  const adminName = adminOrganization
+  ? adminOrganization.organization.name
+  : 'N/A';
+  const adminRole = adminOrganization
+  ? adminOrganization.membership.role
+  : 'N/A';
+  const adminImageUrl = adminOrganization
+  ? adminOrganization.organization.imageUrl
+  : '/admin.jpeg';
+
+  if (showLoader) {
+    return <Loading />;
+  }
+
   return (
     <div className={styles.container}>
     <Head>
